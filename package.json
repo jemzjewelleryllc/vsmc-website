@@ -1,0 +1,36 @@
+{
+  "name": "vsmc-website",
+  "version": "1.0.0",
+  "description": "VSMC - Very Specific Medical Centre for Chronic Anxiety & Pain - Professional healthcare website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server --port=3000",
+    "lint": "npx eslint script.js booking.js",
+    "lint:css": "npx stylelint '**/*.css'",
+    "format": "npx prettier --write '**/*.{html,css,js}'",
+    "build": "echo 'Static site - no build required'",
+    "package": "zip -r vsmc-website.zip *.html *.css *.js openspec/ .github/ -x '*.DS_Store'",
+    "test": "echo 'No tests configured'"
+  },
+  "keywords": [
+    "healthcare",
+    "medical",
+    "vsmc",
+    "anxiety",
+    "pain-management",
+    "phipa",
+    "ontario"
+  ],
+  "author": "VSMC Healthcare",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

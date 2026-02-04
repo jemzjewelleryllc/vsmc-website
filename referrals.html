@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Refer a patient or request a referral to VSMC specialists">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><circle cx='20' cy='20' r='18' fill='none' stroke='%236366f1' stroke-width='2.5'/><path d='M20 12v16M12 20h16' stroke='%236366f1' stroke-width='3' stroke-linecap='round'/></svg>">
+    
+    <title>Referrals | VSMC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" style="top: 0;">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="url(#grad)" stroke-width="2.5"/><path d="M20 12v16M12 20h16" stroke="url(#grad)" stroke-width="3" stroke-linecap="round"/><defs><linearGradient id="grad" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs></svg>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">VSMC</span>
+                    <span class="brand-tagline">Chronic Anxiety & Pain Centre</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#team">Our Team</a></li>
+                <li><a href="intake.html">Patient Forms</a></li>
+                <li><a href="referrals.html" class="active">Referrals</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="tel:+14165551234" class="nav-phone"><span>📞</span> (416) 555-1234</a>
+                <a href="booking.html" class="btn btn-primary btn-sm">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="section-badge">Referrals</span>
+                <h1>Refer a Patient to <span class="gradient-text">VSMC</span></h1>
+                <p>Healthcare providers can refer patients for specialized chronic pain and anxiety treatment. Patients may also self-refer for consultation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referral Section -->
+    <section class="intake-section">
+        <div class="container">
+            <div class="intake-grid">
+                <div class="intake-form">
+                    <!-- Referral Type Tabs -->
+                    <div class="referral-tabs">
+                        <button class="referral-tab active" onclick="switchTab('physician')">🏥 I'm a Healthcare Provider</button>
+                        <button class="referral-tab" onclick="switchTab('patient')">👤 I'm a Patient</button>
+                    </div>
+
+                    <!-- Physician Referral Form -->
+                    <div class="referral-content active" id="physicianReferral">
+                        <form id="physicianReferralForm">
+                            <div class="form-section">
+                                <h3>👨‍⚕️ Referring Provider Information</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="providerName">Provider Name *</label>
+                                        <input type="text" id="providerName" name="providerName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="providerLicense">License/Registration # *</label>
+                                        <input type="text" id="providerLicense" name="providerLicense" placeholder="e.g., CPSO #12345" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="practiceName">Practice/Clinic Name *</label>
+                                    <input type="text" id="practiceName" name="practiceName" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="providerPhone">Phone *</label>
+                                        <input type="tel" id="providerPhone" name="providerPhone" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="providerFax">Fax</label>
+                                        <input type="tel" id="providerFax" name="providerFax">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="providerEmail">Email *</label>
+                                    <input type="email" id="providerEmail" name="providerEmail" required>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>👤 Patient Information</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="patientFirstName">Patient First Name *</label>
+                                        <input type="text" id="patientFirstName" name="patientFirstName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="patientLastName">Patient Last Name *</label>
+                                        <input type="text" id="patientLastName" name="patientLastName" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="patientDOB">Date of Birth *</label>
+                                        <input type="date" id="patientDOB" name="patientDOB" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="patientHealthCard">Health Card #</label>
+                                        <input type="text" id="patientHealthCard" name="patientHealthCard">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="patientPhone">Patient Phone *</label>
+                                        <input type="tel" id="patientPhone" name="patientPhone" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="patientEmail">Patient Email</label>
+                                        <input type="email" id="patientEmail" name="patientEmail">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>📋 Referral Details</h3>
+                                <div class="form-group">
+                                    <label for="referralType">Referral Type *</label>
+                                    <select id="referralType" name="referralType" title="Select referral type" required>
+                                        <option value="">Select specialty...</option>
+                                        <option value="chronic-pain">Chronic Pain Management</option>
+                                        <option value="headache">Headache / Migraine Treatment</option>
+                                        <option value="back-pain">Back / Neck Pain</option>
+                                        <option value="anxiety">Anxiety Treatment</option>
+                                        <option value="psychiatric">Psychiatric Evaluation</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="preferredSpecialist">Preferred Specialist (Optional)</label>
+                                    <select id="preferredSpecialist" name="preferredSpecialist" title="Select preferred specialist">
+                                        <option value="">No preference - First available</option>
+                                        <option value="dr-sandhu">Dr. Harmanjit Singh Harry Sandhu - Chronic Pain</option>
+                                        <option value="dr-chen">Dr. Michael Chen - Psychiatry</option>
+                                        <option value="dr-williams">Dr. Sarah Williams - Pain Management</option>
+                                        <option value="dr-park">Dr. James Park - Clinical Psychology</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="urgency">Urgency Level *</label>
+                                    <select id="urgency" name="urgency" title="Select urgency level" required>
+                                        <option value="">Select urgency...</option>
+                                        <option value="routine">Routine (4-6 weeks)</option>
+                                        <option value="soon">Soon (2-4 weeks)</option>
+                                        <option value="urgent">Urgent (within 1 week)</option>
+                                        <option value="emergent">Emergent (within 48 hours)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="reasonForReferral">Reason for Referral *</label>
+                                    <textarea id="reasonForReferral" name="reasonForReferral" rows="4" placeholder="Please provide clinical details, diagnosis, and reason for referral..." required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="relevantHistory">Relevant Medical History</label>
+                                    <textarea id="relevantHistory" name="relevantHistory" rows="3" placeholder="Relevant diagnoses, treatments tried, medications..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="currentMeds">Current Medications</label>
+                                    <textarea id="currentMeds" name="currentMeds" rows="2" placeholder="List current medications and dosages..."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>📎 Attachments</h3>
+                                <p style="color: var(--text-muted); margin-bottom: 16px; font-size: 0.9rem;">For secure document transfer, please fax supporting documents to (416) 555-1235 or email to referrals@vsmc.health</p>
+                                <div class="consent-box" style="background: var(--bg-dark);">
+                                    <p><strong>Documents to include:</strong></p>
+                                    <ul>
+                                        <li>Recent clinical notes</li>
+                                        <li>Relevant test results (imaging, bloodwork)</li>
+                                        <li>Previous specialist reports</li>
+                                        <li>Current medication list</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="patientConsent" required>
+                                        <span>I confirm that the patient has consented to this referral and to sharing their health information with VSMC in accordance with PHIPA.</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit Referral →</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Patient Self-Referral Form -->
+                    <div class="referral-content" id="patientReferral">
+                        <form id="patientReferralForm">
+                            <div class="consent-box">
+                                <h4>ℹ️ Self-Referral Information</h4>
+                                <p>While many patients are referred by their family doctor, you may also self-refer to VSMC. Our team will review your request and contact you to schedule a consultation.</p>
+                                <p><strong>Note:</strong> Some services may require a physician referral. We'll let you know if additional documentation is needed.</p>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>👤 Your Information</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="selfFirstName">First Name *</label>
+                                        <input type="text" id="selfFirstName" name="firstName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="selfLastName">Last Name *</label>
+                                        <input type="text" id="selfLastName" name="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="selfDOB">Date of Birth *</label>
+                                        <input type="date" id="selfDOB" name="dob" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="selfPhone">Phone Number *</label>
+                                        <input type="tel" id="selfPhone" name="phone" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="selfEmail">Email Address *</label>
+                                    <input type="email" id="selfEmail" name="email" required>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>👨‍⚕️ Current Healthcare Provider</h3>
+                                <div class="form-group">
+                                    <label for="familyDoctor">Family Doctor Name</label>
+                                    <input type="text" id="familyDoctor" name="familyDoctor" placeholder="If applicable">
+                                </div>
+                                <div class="form-group">
+                                    <label for="doctorClinic">Clinic Name</label>
+                                    <input type="text" id="doctorClinic" name="doctorClinic">
+                                </div>
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="noFamilyDoctor">
+                                        <span>I do not currently have a family doctor</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>🩺 Reason for Self-Referral</h3>
+                                <div class="form-group">
+                                    <label for="selfReferralReason">What brings you to VSMC? *</label>
+                                    <select id="selfReferralReason" name="referralReason" title="Select reason for referral" required>
+                                        <option value="">Select your primary concern...</option>
+                                        <option value="chronic-pain">Chronic Pain</option>
+                                        <option value="headaches">Headaches / Migraines</option>
+                                        <option value="back-neck-pain">Back or Neck Pain</option>
+                                        <option value="anxiety">Anxiety</option>
+                                        <option value="panic-attacks">Panic Attacks</option>
+                                        <option value="depression">Depression</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="selfSymptoms">Please describe your symptoms *</label>
+                                    <textarea id="selfSymptoms" name="symptoms" rows="4" placeholder="Describe your symptoms, how long you've had them, and what treatments you've tried..." required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="selfPreferredContact">Preferred Contact Method</label>
+                                    <select id="selfPreferredContact" name="preferredContact" title="Select preferred contact method">
+                                        <option value="phone">Phone Call</option>
+                                        <option value="email">Email</option>
+                                        <option value="text">Text Message</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="selfConsent" required>
+                                        <span>I consent to VSMC contacting me regarding this referral request and collecting my health information as needed in accordance with PHIPA.</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit Request →</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Confirmation (hidden) -->
+                    <div class="referral-content" id="referralConfirmation">
+                        <div class="booking-confirmation">
+                            <div class="confirmation-icon">✅</div>
+                            <h2>Referral Submitted!</h2>
+                            <p>Your referral has been received. Our team will review it and respond within 1-2 business days.</p>
+                            <div class="confirmation-details">
+                                <div class="detail-row"><span>Reference #:</span><strong id="referralRef"></strong></div>
+                                <div class="detail-row"><span>Submitted:</span><strong id="referralDate"></strong></div>
+                                <div class="detail-row"><span>Status:</span><strong style="color: var(--warning);">Under Review</strong></div>
+                            </div>
+                            <div class="confirmation-actions">
+                                <a href="index.html" class="btn btn-primary btn-lg">Return to Home</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="booking-sidebar">
+                    <div class="sidebar-card highlighted">
+                        <h3>📨 Fax Referrals</h3>
+                        <p>Prefer to fax? Send referrals to:</p>
+                        <p><strong>(416) 555-1235</strong></p>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>⏱️ Response Time</h3>
+                        <ul style="color: var(--text-muted); font-size: 0.9rem; padding-left: 16px; line-height: 1.8;">
+                            <li>Routine: 2-3 business days</li>
+                            <li>Soon: 1-2 business days</li>
+                            <li>Urgent: Same day</li>
+                            <li>Emergent: Within hours</li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>📞 Questions?</h3>
+                        <p>Referral inquiries:</p>
+                        <p><a href="tel:+14165551234">(416) 555-1234</a></p>
+                        <p><a href="mailto:referrals@vsmc.health">referrals@vsmc.health</a></p>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>🏥 Our Specialists</h3>
+                        <ul style="color: var(--text-muted); font-size: 0.85rem; padding-left: 16px; line-height: 1.8;">
+                            <li>Dr. Sandhu - Chronic Pain</li>
+                            <li>Dr. Chen - Psychiatry</li>
+                            <li>Dr. Williams - Pain Management</li>
+                            <li>Dr. Park - Psychology</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p>&copy; 2026 VSMC - Very Specific Medical Centre. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="index.html">Home</a>
+                    <a href="booking.html">Book Appointment</a>
+                    <a href="intake.html">Patient Forms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching
+        function switchTab(type) {
+            document.querySelectorAll('.referral-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.referral-content').forEach(c => c.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            document.getElementById(type + 'Referral').classList.add('active');
+        }
+
+        // Form submissions
+        document.getElementById('physicianReferralForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showConfirmation();
+        });
+
+        document.getElementById('patientReferralForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showConfirmation();
+        });
+
+        function showConfirmation() {
+            const refNum = 'VSMC-REF-' + Date.now().toString(36).toUpperCase();
+            const refDate = new Date().toLocaleDateString('en-US', { 
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' 
+            });
+            
+            document.getElementById('referralRef').textContent = refNum;
+            document.getElementById('referralDate').textContent = refDate;
+            
+            document.querySelectorAll('.referral-content').forEach(c => c.classList.remove('active'));
+            document.getElementById('referralConfirmation').classList.add('active');
+            window.scrollTo({ top: 200, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

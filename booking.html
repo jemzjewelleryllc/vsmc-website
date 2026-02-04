@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book an appointment at VSMC - Very Specific Medical Centre for Chronic Anxiety & Pain">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><circle cx='20' cy='20' r='18' fill='none' stroke='%236366f1' stroke-width='2.5'/><path d='M20 12v16M12 20h16' stroke='%236366f1' stroke-width='3' stroke-linecap='round'/></svg>">
+    
+    <title>Book Appointment | VSMC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" style="top: 0;">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="url(#grad)" stroke-width="2.5"/><path d="M20 12v16M12 20h16" stroke="url(#grad)" stroke-width="3" stroke-linecap="round"/><defs><linearGradient id="grad" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs></svg>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">VSMC</span>
+                    <span class="brand-tagline">Chronic Anxiety & Pain Centre</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#team">Our Team</a></li>
+                <li><a href="intake.html">Patient Forms</a></li>
+                <li><a href="referrals.html">Referrals</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="tel:+14165551234" class="nav-phone"><span>📞</span> (416) 555-1234</a>
+                <a href="booking.html" class="btn btn-primary btn-sm">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="section-badge">Online Booking</span>
+                <h1>Schedule Your <span class="gradient-text">Appointment</span></h1>
+                <p>Book a consultation with our specialists at Sherway Medical Centre. Same-week appointments available.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-grid">
+                <!-- Step Progress -->
+                <div class="booking-progress">
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-circle">1</div>
+                        <span>Select Service</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-circle">2</div>
+                        <span>Choose Provider</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-circle">3</div>
+                        <span>Pick Date & Time</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="4">
+                        <div class="step-circle">4</div>
+                        <span>Your Details</span>
+                    </div>
+                </div>
+
+                <!-- Booking Form Container -->
+                <div class="booking-form-container">
+                    <form id="bookingForm" class="booking-form">
+                        <!-- Step 1: Service Selection -->
+                        <div class="form-step active" data-step="1">
+                            <h2>What type of appointment do you need?</h2>
+                            <div class="service-options">
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="initial-consultation" required>
+                                    <div class="option-card">
+                                        <span class="option-icon">🩺</span>
+                                        <div class="option-content">
+                                            <strong>Initial Consultation</strong>
+                                            <span>First-time patient assessment (60 min)</span>
+                                        </div>
+                                        <span class="option-badge">Free</span>
+                                    </div>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="pain-management">
+                                    <div class="option-card">
+                                        <span class="option-icon">💆</span>
+                                        <div class="option-content">
+                                            <strong>Pain Management</strong>
+                                            <span>Chronic pain consultation (45 min)</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="anxiety-treatment">
+                                    <div class="option-card">
+                                        <span class="option-icon">🧠</span>
+                                        <div class="option-content">
+                                            <strong>Anxiety Treatment</strong>
+                                            <span>Mental health consultation (45 min)</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="follow-up">
+                                    <div class="option-card">
+                                        <span class="option-icon">📋</span>
+                                        <div class="option-content">
+                                            <strong>Follow-Up Visit</strong>
+                                            <span>Existing patient check-in (30 min)</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="telehealth">
+                                    <div class="option-card">
+                                        <span class="option-icon">📞</span>
+                                        <div class="option-content">
+                                            <strong>Telehealth Consultation</strong>
+                                            <span>Virtual video appointment (30 min)</span>
+                                        </div>
+                                        <span class="option-badge online">Online</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-primary btn-lg" onclick="nextStep()">Continue →</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Provider Selection -->
+                        <div class="form-step" data-step="2">
+                            <h2>Choose your healthcare provider</h2>
+                            <div class="provider-options">
+                                <label class="provider-option">
+                                    <input type="radio" name="provider" value="any" required>
+                                    <div class="option-card">
+                                        <span class="option-icon">✨</span>
+                                        <div class="option-content">
+                                            <strong>First Available</strong>
+                                            <span>See the earliest available specialist</span>
+                                        </div>
+                                        <span class="option-badge">Fastest</span>
+                                    </div>
+                                </label>
+                                <label class="provider-option">
+                                    <input type="radio" name="provider" value="dr-sandhu">
+                                    <div class="option-card">
+                                        <span class="option-icon">👨‍⚕️</span>
+                                        <div class="option-content">
+                                            <strong>Dr. Harmanjit Singh Harry Sandhu</strong>
+                                            <span>Chronic Pain Specialist • CPSO #79540</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="provider-option">
+                                    <input type="radio" name="provider" value="dr-chen">
+                                    <div class="option-card">
+                                        <span class="option-icon">👨‍⚕️</span>
+                                        <div class="option-content">
+                                            <strong>Dr. Michael Chen</strong>
+                                            <span>Medical Director, Psychiatrist</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="provider-option">
+                                    <input type="radio" name="provider" value="dr-williams">
+                                    <div class="option-card">
+                                        <span class="option-icon">👩‍⚕️</span>
+                                        <div class="option-content">
+                                            <strong>Dr. Sarah Williams</strong>
+                                            <span>Pain Management Specialist</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="provider-option">
+                                    <input type="radio" name="provider" value="dr-park">
+                                    <div class="option-card">
+                                        <span class="option-icon">👨‍⚕️</span>
+                                        <div class="option-content">
+                                            <strong>Dr. James Park</strong>
+                                            <span>Clinical Psychologist</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-outline btn-lg" onclick="prevStep()">← Back</button>
+                                <button type="button" class="btn btn-primary btn-lg" onclick="nextStep()">Continue →</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Date & Time Selection -->
+                        <div class="form-step" data-step="3">
+                            <h2>Select your preferred date & time</h2>
+                            <div class="datetime-grid">
+                                <div class="calendar-section">
+                                    <h3>📅 Select Date</h3>
+                                    <div class="calendar-nav">
+                                        <button type="button" class="cal-nav-btn" onclick="changeMonth(-1)">←</button>
+                                        <span id="calendarMonth">February 2026</span>
+                                        <button type="button" class="cal-nav-btn" onclick="changeMonth(1)">→</button>
+                                    </div>
+                                    <div class="calendar-grid">
+                                        <div class="cal-header">Sun</div>
+                                        <div class="cal-header">Mon</div>
+                                        <div class="cal-header">Tue</div>
+                                        <div class="cal-header">Wed</div>
+                                        <div class="cal-header">Thu</div>
+                                        <div class="cal-header">Fri</div>
+                                        <div class="cal-header">Sat</div>
+                                        <div id="calendarDays"></div>
+                                    </div>
+                                    <input type="hidden" name="date" id="selectedDate" required>
+                                </div>
+                                <div class="time-section">
+                                    <h3>🕐 Select Time</h3>
+                                    <div class="time-slots" id="timeSlots">
+                                        <p class="time-hint">Select a date first to see available times</p>
+                                    </div>
+                                    <input type="hidden" name="time" id="selectedTime" required>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-outline btn-lg" onclick="prevStep()">← Back</button>
+                                <button type="button" class="btn btn-primary btn-lg" onclick="nextStep()">Continue →</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Patient Details -->
+                        <div class="form-step" data-step="4">
+                            <h2>Your contact information</h2>
+                            <div class="patient-form-grid">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name *</label>
+                                        <input type="text" id="firstName" name="firstName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name *</label>
+                                        <input type="text" id="lastName" name="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Email Address *</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number *</label>
+                                        <input type="tel" id="phone" name="phone" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dob">Date of Birth *</label>
+                                    <input type="date" id="dob" name="dob" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="reason">Reason for Visit</label>
+                                    <textarea id="reason" name="reason" rows="3" placeholder="Briefly describe your symptoms or reason for appointment..."></textarea>
+                                </div>
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="newPatient" id="newPatient">
+                                        <span>I am a new patient at VSMC</span>
+                                    </label>
+                                </div>
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="consent" id="consent" required>
+                                        <span>I consent to VSMC collecting my information for appointment scheduling purposes in accordance with PHIPA regulations. <a href="intake.html">View Privacy Policy</a></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-outline btn-lg" onclick="prevStep()">← Back</button>
+                                <button type="submit" class="btn btn-primary btn-lg">Confirm Booking ✓</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Confirmation -->
+                    <div class="booking-confirmation" id="bookingConfirmation" style="display: none;">
+                        <div class="confirmation-icon">✅</div>
+                        <h2>Appointment Confirmed!</h2>
+                        <p>Your appointment has been successfully scheduled. A confirmation email has been sent to your email address.</p>
+                        <div class="confirmation-details" id="confirmationDetails"></div>
+                        <div class="confirmation-actions">
+                            <a href="intake.html" class="btn btn-primary btn-lg">Complete Patient Forms →</a>
+                            <a href="index.html" class="btn btn-outline btn-lg">Return to Home</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Sidebar -->
+                <div class="booking-sidebar">
+                    <div class="sidebar-card">
+                        <h3>📍 Location</h3>
+                        <p><strong>Sherway Medical Centre</strong><br>25 The West Mall<br>Etobicoke, ON M9C 1B8</p>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>📞 Need Help?</h3>
+                        <p>Call us at <a href="tel:+14165551234">(416) 555-1234</a></p>
+                        <p>Mon-Fri: 8AM-8PM<br>Sat: 9AM-5PM</p>
+                    </div>
+                    <div class="sidebar-card highlighted">
+                        <h3>✨ First Visit?</h3>
+                        <p>New patients receive a <strong>FREE initial consultation</strong>. Please arrive 15 minutes early to complete paperwork.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p>&copy; 2026 VSMC - Very Specific Medical Centre. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="index.html">Home</a>
+                    <a href="intake.html">Patient Forms</a>
+                    <a href="referrals.html">Referrals</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="booking.js"></script>
+</body>
+</html>
