@@ -119,6 +119,18 @@
 .referral-content { display: none; }
 .referral-content.active { display: block; }
 
+/* Utility Classes for Inline Style Replacement */
+.navbar-top { top: 0; }
+.footer-bottom-simple { border-top: none; padding-top: 0; }
+.sidebar-list { color: var(--text-muted); font-size: 0.9rem; padding-left: 16px; line-height: 1.8; }
+.sidebar-list-sm { color: var(--text-muted); font-size: 0.85rem; padding-left: 16px; line-height: 1.8; }
+.sidebar-list-noheight { color: var(--text-muted); font-size: 0.9rem; padding-left: 16px; }
+.text-muted-sm { color: var(--text-muted); margin-bottom: 16px; font-size: 0.9rem; }
+.text-warning { color: var(--warning); }
+.text-success { color: var(--success); }
+.consent-box-dark { background: var(--bg-dark); }
+.hidden { display: none; }
+
 /* Responsive */
 @media (max-width: 1024px) {
     .booking-grid, .intake-grid { grid-template-columns: 1fr; }

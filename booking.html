@@ -10,9 +10,16 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- SEO & Professional Polish -->
+    <meta name="theme-color" content="#ec4899">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><circle cx='20' cy='20' r='18' fill='none' stroke='%23ec4899' stroke-width='2.5'/><path d='M20 12v16M12 20h16' stroke='%233b82f6' stroke-width='3' stroke-linecap='round'/></svg>">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><circle cx='20' cy='20' r='18' fill='none' stroke='%236366f1' stroke-width='2.5'/><path d='M20 12v16M12 20h16' stroke='%236366f1' stroke-width='3' stroke-linecap='round'/></svg>">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Book Appointment | VSMC">
+    <meta property="og:description" content="Schedule your specialized medical consultation at VSMC.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vsmc.health/booking">
     
     <title>Book Appointment | VSMC</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +30,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar" style="top: 0;">
+    <nav class="navbar navbar-top">
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <div class="logo-icon">
@@ -125,12 +132,42 @@
                                     </div>
                                 </label>
                                 <label class="service-option">
-                                    <input type="radio" name="service" value="follow-up">
+                                    <input type="radio" name="service" value="neurological">
                                     <div class="option-card">
-                                        <span class="option-icon">📋</span>
+                                        <span class="option-icon">🧬</span>
                                         <div class="option-content">
-                                            <strong>Follow-Up Visit</strong>
-                                            <span>Existing patient check-in (30 min)</span>
+                                            <strong>Neurological Care</strong>
+                                            <span>Migraine and nerve pain assessment (45 min)</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="injection">
+                                    <div class="option-card">
+                                        <span class="option-icon">💉</span>
+                                        <div class="option-content">
+                                            <strong>Injection Therapies</strong>
+                                            <span>Targeted injection consultation (30 min)</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="physical-rehab">
+                                    <div class="option-card">
+                                        <span class="option-icon">🏃</span>
+                                        <div class="option-content">
+                                            <strong>Physical Rehabilitation</strong>
+                                            <span>Physiotherapy assessment (45 min)</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="sleep-disorders">
+                                    <div class="option-card">
+                                        <span class="option-icon">😴</span>
+                                        <div class="option-content">
+                                            <strong>Sleep Disorders</strong>
+                                            <span>Insomnia and sleep apnea consultation (45 min)</span>
                                         </div>
                                     </div>
                                 </label>
@@ -143,6 +180,16 @@
                                             <span>Virtual video appointment (30 min)</span>
                                         </div>
                                         <span class="option-badge online">Online</span>
+                                    </div>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="follow-up">
+                                    <div class="option-card">
+                                        <span class="option-icon">📋</span>
+                                        <div class="option-content">
+                                            <strong>Follow-Up Visit</strong>
+                                            <span>Existing patient check-in (30 min)</span>
+                                        </div>
                                     </div>
                                 </label>
                             </div>
@@ -203,6 +250,66 @@
                                         <div class="option-content">
                                             <strong>Dr. James Park</strong>
                                             <span>Clinical Psychologist</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="provider-option">
+                                    <input type="radio" name="provider" value="dr-rodriguez">
+                                    <div class="option-card">
+                                        <span class="option-icon">👩‍⚕️</span>
+                                        <div class="option-content">
+                                            <strong>Dr. Emily Rodriguez</strong>
+                                            <span>Dermatologist</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="provider-option">
+                                    <input type="radio" name="provider" value="dr-patel">
+                                    <div class="option-card">
+                                        <span class="option-icon">👩‍⚕️</span>
+                                        <div class="option-content">
+                                            <strong>Dr. Priya Patel</strong>
+                                            <span>Neurologist</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="provider-option">
+                                    <input type="radio" name="provider" value="dr-thompson">
+                                    <div class="option-card">
+                                        <span class="option-icon">👨‍⚕️</span>
+                                        <div class="option-content">
+                                            <strong>Dr. Marcus Thompson</strong>
+                                            <span>Sports Medicine Physician</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="provider-option">
+                                    <input type="radio" name="provider" value="dr-nguyen">
+                                    <div class="option-card">
+                                        <span class="option-icon">👩‍⚕️</span>
+                                        <div class="option-content">
+                                            <strong>Dr. Lisa Nguyen</strong>
+                                            <span>Anesthesiologist & Pain Specialist</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="provider-option">
+                                    <input type="radio" name="provider" value="dr-kim">
+                                    <div class="option-card">
+                                        <span class="option-icon">👨‍⚕️</span>
+                                        <div class="option-content">
+                                            <strong>Dr. David Kim</strong>
+                                            <span>Rehabilitation Specialist</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="provider-option">
+                                    <input type="radio" name="provider" value="dr-okonkwo">
+                                    <div class="option-card">
+                                        <span class="option-icon">👩‍⚕️</span>
+                                        <div class="option-content">
+                                            <strong>Dr. Rachel Okonkwo</strong>
+                                            <span>Naturopathic Doctor</span>
                                         </div>
                                     </div>
                                 </label>
@@ -303,7 +410,7 @@
                     </form>
 
                     <!-- Confirmation -->
-                    <div class="booking-confirmation" id="bookingConfirmation" style="display: none;">
+                    <div class="booking-confirmation hidden" id="bookingConfirmation">
                         <div class="confirmation-icon">✅</div>
                         <h2>Appointment Confirmed!</h2>
                         <p>Your appointment has been successfully scheduled. A confirmation email has been sent to your email address.</p>
@@ -338,7 +445,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+            <div class="footer-bottom footer-bottom-simple">
                 <p>&copy; 2026 VSMC - Very Specific Medical Centre. All rights reserved.</p>
                 <div class="footer-legal">
                     <a href="index.html">Home</a>

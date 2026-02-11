@@ -11,6 +11,11 @@
     "format": "npx prettier --write '**/*.{html,css,js}'",
     "build": "echo 'Static site - no build required'",
     "package": "zip -r vsmc-website.zip *.html *.css *.js openspec/ .github/ -x '*.DS_Store'",
+    "install:letzplayfull": "node .extensions/install.js letzplayfull",
+    "letzplayfull": "npm run install:letzplayfull",
+    "install:thequadsfather": "node .extensions/install.js thequadsfather",
+    "install:jemzjewelz": "node .extensions/install.js jemzjewelz",
+    "jemzjewelz": "npm run install:jemzjewelz",
     "test": "echo 'No tests configured'"
   },
   "keywords": [

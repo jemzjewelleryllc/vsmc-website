@@ -11,8 +11,15 @@
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><circle cx='20' cy='20' r='18' fill='none' stroke='%236366f1' stroke-width='2.5'/><path d='M20 12v16M12 20h16' stroke='%236366f1' stroke-width='3' stroke-linecap='round'/></svg>">
+    <!-- SEO & Professional Polish -->
+    <meta name="theme-color" content="#ec4899">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><circle cx='20' cy='20' r='18' fill='none' stroke='%23ec4899' stroke-width='2.5'/><path d='M20 12v16M12 20h16' stroke='%233b82f6' stroke-width='3' stroke-linecap='round'/></svg>">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Referrals | VSMC">
+    <meta property="og:description" content="Professional referral platform for healthcare providers and patients at VSMC.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vsmc.health/referrals">
     
     <title>Referrals | VSMC</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +30,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar" style="top: 0;">
+    <nav class="navbar navbar-top">
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <div class="logo-icon">
@@ -146,10 +153,23 @@
                                     <select id="referralType" name="referralType" title="Select referral type" required>
                                         <option value="">Select specialty...</option>
                                         <option value="chronic-pain">Chronic Pain Management</option>
-                                        <option value="headache">Headache / Migraine Treatment</option>
-                                        <option value="back-pain">Back / Neck Pain</option>
                                         <option value="anxiety">Anxiety Treatment</option>
                                         <option value="psychiatric">Psychiatric Evaluation</option>
+                                        <option value="neurological">Neurological Care</option>
+                                        <option value="injection">Injection Therapies</option>
+                                        <option value="physical-rehab">Physical Rehabilitation</option>
+                                        <option value="sleep-disorders">Sleep Disorders</option>
+                                        <option value="cardiovascular-stress">Cardiovascular Stress</option>
+                                        <option value="musculoskeletal">Musculoskeletal Pain</option>
+                                        <option value="medication-mgmt">Medication Management</option>
+                                        <option value="naturopathic">Naturopathic Medicine</option>
+                                        <option value="stress-mgmt">Stress Management</option>
+                                        <option value="diagnostic-imaging">Diagnostic Imaging</option>
+                                        <option value="pediatric-pain">Pediatric Pain</option>
+                                        <option value="geriatric-care">Geriatric Care</option>
+                                        <option value="electrotherapy">TENS & Electrotherapy</option>
+                                        <option value="workplace-injury">Workplace Injury</option>
+                                        <option value="dermatology">Dermatology (Stress-related)</option>
                                         <option value="other">Other</option>
                                     </select>
                                 </div>
@@ -161,6 +181,12 @@
                                         <option value="dr-chen">Dr. Michael Chen - Psychiatry</option>
                                         <option value="dr-williams">Dr. Sarah Williams - Pain Management</option>
                                         <option value="dr-park">Dr. James Park - Clinical Psychology</option>
+                                        <option value="dr-rodriguez">Dr. Emily Rodriguez - Dermatology</option>
+                                        <option value="dr-patel">Dr. Priya Patel - Neurology</option>
+                                        <option value="dr-thompson">Dr. Marcus Thompson - Sports Medicine</option>
+                                        <option value="dr-nguyen">Dr. Lisa Nguyen - Anesthesiologist</option>
+                                        <option value="dr-kim">Dr. David Kim - Rehabilitation</option>
+                                        <option value="dr-okonkwo">Dr. Rachel Okonkwo - Naturopathic</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -189,8 +215,8 @@
 
                             <div class="form-section">
                                 <h3>📎 Attachments</h3>
-                                <p style="color: var(--text-muted); margin-bottom: 16px; font-size: 0.9rem;">For secure document transfer, please fax supporting documents to (416) 555-1235 or email to referrals@vsmc.health</p>
-                                <div class="consent-box" style="background: var(--bg-dark);">
+                                <p class="text-muted-sm">For secure document transfer, please fax supporting documents to (416) 555-1235 or email to referrals@vsmc.health</p>
+                                <div class="consent-box consent-box-dark">
                                     <p><strong>Documents to include:</strong></p>
                                     <ul>
                                         <li>Recent clinical notes</li>
@@ -324,7 +350,7 @@
                             <div class="confirmation-details">
                                 <div class="detail-row"><span>Reference #:</span><strong id="referralRef"></strong></div>
                                 <div class="detail-row"><span>Submitted:</span><strong id="referralDate"></strong></div>
-                                <div class="detail-row"><span>Status:</span><strong style="color: var(--warning);">Under Review</strong></div>
+                                <div class="detail-row"><span>Status:</span><strong class="text-warning">Under Review</strong></div>
                             </div>
                             <div class="confirmation-actions">
                                 <a href="index.html" class="btn btn-primary btn-lg">Return to Home</a>
@@ -342,7 +368,7 @@
                     </div>
                     <div class="sidebar-card">
                         <h3>⏱️ Response Time</h3>
-                        <ul style="color: var(--text-muted); font-size: 0.9rem; padding-left: 16px; line-height: 1.8;">
+                        <ul class="sidebar-list">
                             <li>Routine: 2-3 business days</li>
                             <li>Soon: 1-2 business days</li>
                             <li>Urgent: Same day</li>
@@ -357,11 +383,17 @@
                     </div>
                     <div class="sidebar-card">
                         <h3>🏥 Our Specialists</h3>
-                        <ul style="color: var(--text-muted); font-size: 0.85rem; padding-left: 16px; line-height: 1.8;">
+                        <ul class="sidebar-list-sm">
                             <li>Dr. Sandhu - Chronic Pain</li>
                             <li>Dr. Chen - Psychiatry</li>
                             <li>Dr. Williams - Pain Management</li>
                             <li>Dr. Park - Psychology</li>
+                            <li>Dr. Rodriguez - Dermatology</li>
+                            <li>Dr. Patel - Neurology</li>
+                            <li>Dr. Thompson - Sports Med</li>
+                            <li>Dr. Nguyen - Anesthesiology</li>
+                            <li>Dr. Kim - Rehabilitation</li>
+                            <li>Dr. Okonkwo - Naturopathic</li>
                         </ul>
                     </div>
                 </div>
@@ -372,7 +404,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+            <div class="footer-bottom footer-bottom-simple">
                 <p>&copy; 2026 VSMC - Very Specific Medical Centre. All rights reserved.</p>
                 <div class="footer-legal">
                     <a href="index.html">Home</a>
